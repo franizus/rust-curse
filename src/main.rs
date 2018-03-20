@@ -24,5 +24,14 @@ fn main()
 	let size_of_z = mem::size_of_val(&z);
 	println!("z = {}, takes up {} bytes, {}-bit OS", z, size_of_z, size_of_z * 8);
 
-	
+	let d = 'x'; //let d:char = 'x';
+	println!("d = {}, size = {} bytes", d, mem::size_of_val(&d));
+
+	let e = 2.5; //double-precision, 8 bytes or 64 bits, f64
+	println!("e = {}, size = {} bytes", e, mem::size_of_val(&e));
+
+	// true false
+	let g = false;
+	println!("g = {}, size = {} bytes", g, mem::size_of_val(&g));
+	let f = 4>0; // true
 }
